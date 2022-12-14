@@ -1,3 +1,5 @@
+import './style/style.css';
+
 const file={
     take: 1,
     seed: 3,
