@@ -12,7 +12,12 @@ module.exports={
         rules:[
             {
                 test:/\.css$/i,
-                use: [MiniCssExtractPlugin.loader,"css-loader"],
+                use: [
+                    mode=== 'production'
+                    ? MiniCssExtractPlugin.loader
+                    :'style-loader',
+                    "css-loader",
+                    "postcss-loader"],
             },
             {
                 test: /\.js$/,
