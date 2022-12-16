@@ -1,15 +1,4 @@
-import './style/style.css';
+import { render } from 'react-dom';
+import App from './components/App';
 
-const file={
-    take: 1,
-    seed: 3,
-    tangle: 4
-}
-const file1={
-    ...file,
-    taken: 10,
-    taker: 123
-}
-
-console.log(file);
-console.log(file1);
+render(<App/>, document.getElementById("root"));
